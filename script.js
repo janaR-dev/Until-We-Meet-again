@@ -47,8 +47,7 @@
     revealItems.forEach(item => item.classList.add("is-visible"));
   }
 
-  // Local photo convention: place matching files in assets/photos.
-  // Supported formats: .jpg, .jpeg, .png, .webp
+  
   const photoNames = ["hero", "team", "players", "match", "friends", "sunset", "j300"];
   const extensions = ["jpg", "jpeg", "png", "webp"];
   document.querySelectorAll("[data-image]").forEach(slot => {
@@ -64,7 +63,7 @@
         slot.classList.add("has-image");
       };
       image.onerror = () => tryExtension(index + 1);
-      image.src = `assets/photos/${name}.${extensions[index]}`;
+      image.src = `assets/photos/itf-images/${name}.${extensions[index]}`;
     };
     tryExtension(0);
   });
